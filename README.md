@@ -51,3 +51,7 @@ user:py_sphyxers/docs$ make html
 to re-build after repo changes:
 user:py_sphyxers/docs$ make clean
 user:py_sphyxers/docs$ make html
+
+
+how to make html viewable on github:
+???
