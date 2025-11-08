@@ -3,60 +3,72 @@
 #### demo repo for sphinx documentation setup
 
 
+#### how to make sphinx documentation
 sequence of commands to generate spinx docs ...
 
-$ pip install sphinx
+1. $ pip install sphinx
+  
 
-ensure directory structure:
+2. ensure project directory structure is similar to this:
 
-py_sphyer
-- data
-- docs
-- reports
-- src
-  - __init__.py
-  - data
-  - __init__.py
-    - read_data.py
-  - ticker
-    - __init__.py
-    - tkr.py
-    - tkr_utils.py
-  - models
-    - __init__.py
-    - base_model.py
-    - arima.py
-  - utils.py
-- test
+    py_sphyxer
+    - data
+    - docs
+    - reports
+    - src
+      - \_\_init\_\_.py
+      - data
+        - \_\_init\_\_.py
+        - read_data.py
+      - ticker
+        - \_\_init\_\_.py
+        - tkr.py
+        - tkr_utils.py
+      - models
+        - \_\_init\_\_.py
+        - base_model.py
+        - arima.py
+      - utils.py
+    - test
+  
 
-commands (from /docs directory)
-user:py_sphyxers/docs$ sphinx-quickstart
-- separate source and build directories: y
+3. commands (from /docs directory)\
 
-from project main directory
-user:py_sphyxers$ sphinx-apidoc -o docs src
 
-update /docs/source/conf.py
+    user:py_sphyxers/docs$ sphinx-quickstart
+    - separate source and build directories?: y
 
-extensions = [
-            'sphinx.ext.autodoc',
-            'sphinx.ext.napoleon',
-            'sphinx.ext.viewcode'
-            ]
-html_theme = 'sphinx_rtd_theme'
+  
 
-add elements to index.rst file, e.g.,:
-   introduction
+4. from project main directory\
+`user:py_sphyxers$ sphinx-apidoc -o docs src`
+  
+
+5. update /docs/source/conf.py\
+
+
+    extensions = [  
+                'sphinx.ext.autodoc',  
+                'sphinx.ext.napoleon',  
+                'sphinx.ext.viewcode'  
+                ]
+
+    html_theme = 'sphinx_rtd_theme'
+
+6. add elements to index.rst file, e.g.,:\
+`   introduction
    usage
    examples
-   src
+   src`
+  
 
-from directory: project/docs ...
-user:py_sphyxers/docs$ make html
+7. from directory: project/docs ...\
+`user:py_sphyxers/docs$ make html`
+  
 
-to re-build after repo changes:
-user:py_sphyxers/docs$ make clean
-user:py_sphyxers/docs$ make html
+8. to re-build after repo changes:\
+`user:py_sphyxers/docs$ make clean
+user:py_sphyxers/docs$ make html`
 
 
 how to make html viewable on github:
