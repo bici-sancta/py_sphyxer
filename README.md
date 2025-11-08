@@ -45,6 +45,12 @@ extensions = [
             ]
 html_theme = 'sphinx_rtd_theme'
 
+add elements to index.rst file, e.g.,:
+   introduction
+   usage
+   examples
+   src
+
 from directory: project/docs ...
 user:py_sphyxers/docs$ make html
 
@@ -55,3 +61,10 @@ user:py_sphyxers/docs$ make html
 
 how to make html viewable on github:
 ???
+
+
+which files are necessary / unnecesaary to commit to the repo?
+- docs/build/html - yes
+- docs/build/doctrees - ?
+- docs/source - ?
+- docs/make.bat, Makefile, src.rst, src.data.rst, etc - ?
