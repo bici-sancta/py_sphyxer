@@ -4,24 +4,16 @@ from pathlib import Path
 
 from yahoofinancials import YahooFinancials
 
-from cs_utils import log_machine
+from src.cs_utils import log_machine
 
 
-@log_machine
 def get_ticker_data(symbl: str, start_date: str, end_date: str) -> pd.DataFrame:
     """
+    reads csv file from f_path, returns data frame
 
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-    aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-
-    :param symbl: ticker symbol
-    :param start_date: date in str format
-    :param end_date:
-    :return:
+    :param f_path:
+    :return: pd.DataFrame
     """
-
 
     logger = logging.getLogger(__name__)
     logger.info(f'_get_ticker_data() {symbl} | {start_date} : {end_date}')
